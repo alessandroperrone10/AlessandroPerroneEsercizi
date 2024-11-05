@@ -1,38 +1,56 @@
 class Punto:
-    def __init__(self, x, y):
+    def __init__(self, x):
         self.x = x
-        self.y = y
     
-    def stampa_punti(self):
-        print("I due nuovi punti sono: ",self.x, " " ,self.y)
+    def stampa_punto(self):
+        print("Il punto inserito è: ",self.x)
 
-
-    def modifica_punti(self):
+    def modifica_punto(self):
         dx = float(input("Inserisci il punto x da modificare: "))
-        dy = float(input("Inserisci il punto y da modificare: "))
-
-        coordinate.x = dx
-        coordinate.y = dy
-
-        coordinate.stampa_punti()
+        self.x = dx
+        self.stampa_punto()
 
     def distanza_origine(self):
-        distanza = (self.x ** 2 + self.y ** 2) ** 0.5
+        distanza = (self.x ** 2) ** 0.5
         print("La distanza dall'origine dei due punti è: ", distanza)
 
 
+class PianoCartesiano:
+    
+    def __init__(self):
+        self.piano_cartesiano = []
+
+    def aggiungi_punto(self,punto):
+        self.piano_cartesiano.append(Punto(punto))
+
+
+    def stampa_piano(self):
+       print("Punti nel piano cartesiano:")
+       for punto in self.piano_cartesiano:
+           punto.stampa_punto()
+        
+    
+
 
 primo_punto = float(input("Inserisci il punto x: "))
-secondo_punto = float(input("Inserisci il punto y: "))
 
-coordinate = Punto(primo_punto,secondo_punto)
+coordinata1 = Punto(primo_punto)
 
-coordinate.stampa_punti()
+coordinata1.stampa_punto()
+
+domanda = input("Vuoi creare un piano cartesiano? si/no: ")
+
+if domanda == "si":
+    secondo_punto = float(input("Inserisci il secondo punto: "))
+    piano = PianoCartesiano()
+    piano.aggiungi_punto(primo_punto)
+    piano.aggiungi_punto(secondo_punto)
+    piano.stampa_piano()
+else:
+    modifica = input("Vuoi modificare le coordinate?: si o no? Scrivi distanza per vedere la distanza dall'origine: ")
+    if modifica == "si":
+        coordinata1.modifica_punto()
+    elif modifica == "distanza":
+        coordinata1.distanza_origine()
 
 
-modifica = input("Vuoi modificare le coordinate?: si o no? Scrivi distanza per vedere la distanza dall'origine: ")
-
-if modifica == "si":
-    coordinate.modifica_punti()
-elif modifica == "distanza":
-    coordinate.distanza_origine()
