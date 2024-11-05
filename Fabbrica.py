@@ -14,6 +14,22 @@ class Prodotto:
         else:
             print("Con la vendita siamo in profitto di:", profitto, "€.")
 
+
+class Elettronica(Prodotto):
+
+    def __init__(self, nome, costo_produzione, prezzo_vendita,classe_energetica):
+        super().__init__(nome, costo_produzione, prezzo_vendita)
+        self.classe_energetica = classe_energetica
+
+
+class Abbigliamento(Prodotto):
+
+    def __init__(self, nome, costo_produzione, prezzo_vendita,materiale):
+        super().__init__(nome, costo_produzione, prezzo_vendita)
+        self.materiale = materiale
+
+
+
 class Fabbrica:
     def __init__(self):
         self.inventario = {}
@@ -51,7 +67,7 @@ class Fabbrica:
         else:
             print("Errore: il prodotto ",nome," non è presente nell'inventario.")
 
-# Esempio di utilizzo
+# Richiamo tutte le classi
 fabbrica = Fabbrica()
 prodotto1 = Prodotto("lampada", 5.00, 10.00)
 
