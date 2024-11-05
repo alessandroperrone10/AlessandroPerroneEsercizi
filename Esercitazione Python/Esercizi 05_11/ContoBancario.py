@@ -17,10 +17,18 @@ class ContoBancario:
 
 
     def deposita(self,importo):
-        self.__saldo += importo
+        if importo < 0:
+            print("Importo non valido per il deposito!")
+        else:
+            self.__saldo += importo
+            print("Deposito effettuato con successo")
 
     def preleva(self,importo):
-        self.__saldo -= importo
+        if self.__saldo >= importo:
+            self.__saldo -= importo
+            print("Prelievo effettuato con successo")
+        else:
+            print("I fondi non sono sufficenti")
 
     def visualizza_saldo(self):
         return self.get_saldo()
@@ -37,12 +45,10 @@ print("Il tuo saldo è di: ",conto.visualizza_saldo())
 
 #Funzione deposita
 conto.deposita(100)
-print("Deposito effettuato")
 print("Il tuo saldo è :",conto.visualizza_saldo())
 
 #Funzione preleva
 conto.preleva(100)
-print("Prelevo effettuato")
 print("Il tuo saldo ora è di: ",conto.visualizza_saldo())
 
 
