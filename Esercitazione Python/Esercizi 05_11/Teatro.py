@@ -1,5 +1,5 @@
 class Posto:
-    def __init__(self,__numero,__fila,__occupato):
+    def __init__(self):
         self.__numero = 0
         self.__fila = " "
         self.__occupato = False

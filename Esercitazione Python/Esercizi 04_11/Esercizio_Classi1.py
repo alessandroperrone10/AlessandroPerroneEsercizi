@@ -16,7 +16,6 @@ class Punto:
 
 
 class PianoCartesiano:
-    
     def __init__(self):
         self.piano_cartesiano = []
 
