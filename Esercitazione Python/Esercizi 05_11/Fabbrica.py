@@ -17,16 +17,27 @@ class Prodotto:
 
 class Elettronica(Prodotto):
 
-    def __init__(self, nome, costo_produzione, prezzo_vendita,classe_energetica):
+    def __init__(self, nome, costo_produzione, prezzo_vendita,__classe_energetica):
         super().__init__(nome, costo_produzione, prezzo_vendita)
-        self.classe_energetica = classe_energetica
+        self.__classe_energetica = __classe_energetica
 
+    def get_classe_energetica(self):
+        return self.__classe_energetica
+
+    def set_classe_energetica(self,classe):
+        self.__classe_energetica = classe
 
 class Abbigliamento(Prodotto):
 
-    def __init__(self, nome, costo_produzione, prezzo_vendita,materiale):
+    def __init__(self, nome, costo_produzione, prezzo_vendita,__materiale):
         super().__init__(nome, costo_produzione, prezzo_vendita)
-        self.materiale = materiale
+        self.__materiale = __materiale
+      
+    def get_materiale(self):
+        return self.__materiale
+
+    def set_materiale(self,materiale):
+        self.__materiale = materiale
 
 
 
