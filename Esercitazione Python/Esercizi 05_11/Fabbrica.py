@@ -104,6 +104,9 @@ fabbrica = Fabbrica()
 # # Rendi quantità di prodotto
 # fabbrica.resi_prodotti(prodotto1.nome, 1)
 
+
+
+#Funzione esterna per testare il polimorfismo
 def VisualizzaProdotto(placeholder):
     placeholder.visualizza_prodotto()
 
@@ -113,7 +116,6 @@ prodotto1 = Prodotto("lampada", 5.00, 10.00)
 lavatrice = Elettronica("lavatrice", 50.00, 200.00, "A++")
 
 maglietta = Abbigliamento("felpa", 20.00, 80.00, "cotone")
-
 
 
 visualizza = VisualizzaProdotto(lavatrice)
