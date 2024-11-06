@@ -196,8 +196,7 @@ class GestoreParcoVeicoli:
                 veicolo_da_eliminare = veicolo
                 break
         
-            self.rimuovi(veicolo)
-            self.aggiungi_veicolo(veicolo)
+            self.rimuovi_veicolo(veicolo)
             print("Veicolo aggiunto al parco auto. ")
 
 
