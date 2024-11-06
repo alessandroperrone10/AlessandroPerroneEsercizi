@@ -32,6 +32,7 @@ class Elettronica(Prodotto):
 
     def visualizza_prodotto(self):
         print(f"Il prodotto è {self.nome} , con classe: {self.get_classe_energetica()}")
+        
 class Abbigliamento(Prodotto):
 
     def __init__(self, nome, costo_produzione, prezzo_vendita,__materiale):
