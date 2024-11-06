@@ -112,7 +112,7 @@ prodotto1 = Prodotto("lampada", 5.00, 10.00)
 
 lavatrice = Elettronica("lavatrice", 50.00, 200.00, "A++")
 
-
+maglietta = Abbigliamento("felpa", 20.00, 80.00, "cotone")
 
 
 
