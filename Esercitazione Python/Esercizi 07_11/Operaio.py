@@ -15,16 +15,21 @@ class Operaio:
             print("Sto già lavorando")
 
 
-class Strumento(ABC):
+class Martello(ABC):
     
     @abstractmethod
     def usa():
         pass
 
 
+class Trapano(ABC):
+
+    @abstractmethod
+    def usa():
+        pass
 
 
-class Muratore(Operaio,Strumento):
+class Muratore(Operaio,Martello):
     def __init__(self, nome, età):
         super().__init__(nome, età)
 
@@ -32,7 +37,7 @@ class Muratore(Operaio,Strumento):
         print("Sto usando il martello! Occhio!")
 
 
-class Carpentiere(Operaio,Strumento):
+class Carpentiere(Operaio,Trapano):
     def __init__(self, nome, età):
         super().__init__(nome, età)
 
