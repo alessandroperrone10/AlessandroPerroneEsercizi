@@ -88,6 +88,11 @@ class CuocoLinea(PersonaleCucina):
     def cucina_piatto(nome_piatto):
         pass
 
+    def get_specialità(self):
+        return self.__specialità
+    
+    def set_specialità(self,specialità):
+        self.__specialità = specialità
 
 class Ristorante:
     def __init__(self):
