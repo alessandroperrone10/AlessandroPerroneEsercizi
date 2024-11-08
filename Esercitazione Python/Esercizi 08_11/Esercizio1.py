@@ -1,6 +1,6 @@
 import numpy as np
 
-class Lista:
+class Array:
     def __init__(self):
         self.lista = np.arange(10,50)
 
@@ -20,7 +20,7 @@ class Lista:
 
 
 
-lista = Lista()
+lista = Array()
 
 #Stampo
 lista.stampa_array()
