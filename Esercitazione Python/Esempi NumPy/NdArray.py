@@ -1,7 +1,9 @@
 import numpy as np
+from scipy import stats
 
 # #Creazione array unidimensionale
-# arr = np.array([1,2,3,4,5])
+arr = np.array([1,2,3,4,5])
+print(stats.mode(arr))
 
 
 # #Creazione array bidimensionale
