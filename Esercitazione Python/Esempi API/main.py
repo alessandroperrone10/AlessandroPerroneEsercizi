@@ -1,3 +1,13 @@
+# Create un programma python che permette tramite le api
+# https://open-meteo.com/en/docs (per le previsioni metereologiche) e
+# (per l’ottenimento in automatico della propria
+# langitudine e latitudine tramite l’indirizzo ip), di vedere le previsione
+# metereologiche.
+# L’utente potrà scegliere se visionarle dei prossimi 1, 3 o 7 giorni e se
+# visionare oltre che le temperature anche la velocità del vento e le
+# probabili precipitazioni.
+
+
 import json
 import requests
 
