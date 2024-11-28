@@ -9,8 +9,7 @@ from sklearn.datasets import load_wine
 from sklearn.decomposition import PCA
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import (accuracy_score, precision_score, recall_score,
-                             f1_score, confusion_matrix)
+from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_score, confusion_matrix)
 
 # Configura le visualizzazioni
 #matplotlib inline
